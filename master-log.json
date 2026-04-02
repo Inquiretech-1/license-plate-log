@@ -1,5 +1,20 @@
 {
   "version": 1,
-  "exportedAt": "2026-04-02T19:00:00.000Z",
-  "entries": []
+  "exportedAt": "2026-04-02T21:00:00.000Z",
+  "entries": [
+    {
+      "id": "00000000-0000-4000-8000-000000000001",
+      "plate": "00000",
+      "when": "2026-04-01T15:30:00.000Z",
+      "location": "Example: Main St & 1st Ave (fictional)",
+      "notes": "DUMMY ENTRY for sample format only—not a real observation. Replace with factual records per project rules."
+    },
+    {
+      "id": "00000000-0000-4000-8000-000000000002",
+      "plate": "00001",
+      "when": "2026-04-02T10:15:00.000Z",
+      "location": "Ejemplo: Bulevar Norte y Calle 5 (ficticio)",
+      "notes": "ENTRADA DE EJEMPLO solo para mostrar el formato—no es una observación real. Sustituir por registros verídicos según las reglas del proyecto."
+    }
+  ]
 }
