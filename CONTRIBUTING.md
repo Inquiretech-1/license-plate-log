@@ -16,7 +16,7 @@ The master log is the canonical, version-controlled record that maintainers merg
 2. **Create a branch** for your contribution, for example:  
    `git checkout -b add-plates-2026-04-02`
 
-3. **Add or update the master log** in the way the project defines (for example a JSON file such as `master-log.json`, or another file named in the repository).  
+3. **Add or update** [`master-log.json`](master-log.json) at the **repository root** (same format as the app’s JSON export: `version`, `exportedAt`, `entries`).  
    - If the app exports **JSON**, you can merge new entries into the existing structure and resolve duplicate `id` fields carefully.  
    - Keep the **CSV column names** unchanged if you use CSV (`plate`, `when_iso`, etc.) so imports remain compatible.
 
@@ -54,7 +54,7 @@ El registro maestro es el historial canónico bajo control de versiones que los 
 2. **Crea una rama** para tu contribución, por ejemplo:  
    `git checkout -b add-plates-2026-04-02`
 
-3. **Añade o actualiza el registro maestro** según lo defina el proyecto (por ejemplo un archivo JSON como `master-log.json`, u otro nombre indicado en el repositorio).  
+3. **Añade o actualiza** [`master-log.json`](master-log.json) en la **raíz del repositorio** (mismo formato que la exportación JSON de la app: `version`, `exportedAt`, `entries`).  
    - Si la app exporta **JSON**, puedes fusionar entradas nuevas en la estructura existente y resolver con cuidado los `id` duplicados.  
    - Mantén los **nombres de columnas CSV** si usas CSV (`plate`, `when_iso`, etc.) para que la importación siga siendo compatible.
 

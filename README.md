@@ -16,6 +16,8 @@ Laws and norms around recording plates and sharing observations **vary by jurisd
 
 Open `license-plate-log.html` in a modern web browser. Data is stored locally in the browser unless you export it; see the in-app help for export/import.
 
+The repository includes **[master-log.json](master-log.json)** at the project root: the **starter shared registry** (same JSON shape as the app’s export). Import it in the app to load those entries, or propose changes via pull request—see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Language
 
 The interface supports **English** and **Spanish** (toggle in the header).
@@ -41,6 +43,8 @@ Las leyes y normas sobre registrar placas y compartir observaciones **varían se
 ## Cómo usar la aplicación
 
 Abre `license-plate-log.html` en un navegador reciente. Los datos se guardan en el navegador salvo que los exportes; consulta la ayuda dentro de la app para exportar/importar.
+
+El repositorio incluye **[master-log.json](master-log.json)** en la raíz del proyecto: el **registro compartido inicial** (mismo formato JSON que la exportación de la app). Impórtalo en la aplicación para cargar esas entradas, o propón cambios mediante *pull request*—véase [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Idioma
 
