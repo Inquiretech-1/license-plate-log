@@ -19,3 +19,29 @@ Open `license-plate-log.html` in a modern web browser. Data is stored locally in
 ## Language
 
 The interface supports **English** and **Spanish** (toggle in the header).
+
+---
+
+## README en español
+
+# Registro de placas
+
+Una aplicación sencilla que se abre en el navegador (`license-plate-log.html`) para **anotar placas** que asocies con **conducción insegura**—por ejemplo conductas **temerarias** o que **pusieron en peligro** a otro conductor, ciclista o peatón.
+
+Úsala como **registro personal** (lo que viste, cuándo y dónde), con exportación/importación opcional para respaldar o mover tus datos.
+
+## Para quienes contribuyen o comparten datos
+
+- **Sé preciso.** Anota lo que realmente observaste; evita suposiciones o completar detalles de los que no estés seguro.
+- **Evita acusaciones falsas.** Entradas equivocadas o exageradas pueden perjudicar a personas inocentes y tener consecuencias legales según el lugar donde vivas.
+- **Usa los canales oficiales cuando corresponda.** En muchos sitios existen denuncias de tráfico o policía; esta herramienta **no** las sustituye.
+
+Las leyes y normas sobre registrar placas y compartir observaciones **varían según la jurisdicción**. Tú eres responsable del uso que hagas de esta información.
+
+## Cómo usar la aplicación
+
+Abre `license-plate-log.html` en un navegador reciente. Los datos se guardan en el navegador salvo que los exportes; consulta la ayuda dentro de la app para exportar/importar.
+
+## Idioma
+
+La interfaz está disponible en **inglés** y **español** (selector en la parte superior).
