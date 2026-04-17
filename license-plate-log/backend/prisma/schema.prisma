@@ -1,0 +1,45 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("viewer")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  plates    Plate[]
+  logs      Log[]
+}
+
+model Plate {
+  id         Int      @id @default(autoincrement())
+  plateText  String
+  confidence Float?
+  cameraId   String?
+  imagePath  String?
+  notes      String?
+  userId     Int?
+  user       User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  logs       Log[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Log {
+  id        Int      @id @default(autoincrement())
+  action    String
+  details   String?
+  plateId   Int?
+  plate     Plate?   @relation(fields: [plateId], references: [id], onDelete: SetNull)
+  userId    Int?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  createdAt DateTime @default(now())
+}

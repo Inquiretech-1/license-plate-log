@@ -1,9 +1,10 @@
-const express = require("express");
+const plateRoutes = require("./plateRoutes");
+const authRoutes = require("./authRoutes");
 
-const router = express.Router();
+/** Mount API route modules on the Express app. */
+function mountRoutes(app) {
+  app.use("/api/plates", plateRoutes);
+  app.use("/api/auth", authRoutes);
+}
 
-router.get("/health", (req, res) => {
-  res.json({ ok: true, service: "license-plate-log" });
-});
-
-module.exports = router;
+module.exports = mountRoutes;
