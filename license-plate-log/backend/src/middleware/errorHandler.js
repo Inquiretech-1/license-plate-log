@@ -1,4 +1,7 @@
-const { Prisma } = require("@prisma/client");
+const {
+  PrismaClientKnownRequestError,
+  PrismaClientValidationError,
+} = require("@prisma/client");
 const config = require("../config");
 
 function formatMessage(err) {
@@ -59,10 +62,15 @@ function errorHandler(err, req, res, next) {
   }
 
   // Prisma
-  if (err instanceof Prisma.PrismaClientKnownRequestError) {
+  if (err instanceof PrismaClientKnownRequestError) {
     switch (err.code) {
       case "P2002": {
-        const target = err.meta && err.meta.target ? err.meta.target.join(", ") : "field";
+        const raw = err.meta && err.meta.target;
+        const target = raw
+          ? Array.isArray(raw)
+            ? raw.join(", ")
+            : String(raw)
+          : "field";
         return res.status(409).json({
           success: false,
           error: `Unique constraint failed on ${target}`,
@@ -90,7 +98,7 @@ function errorHandler(err, req, res, next) {
     }
   }
 
-  if (err instanceof Prisma.PrismaClientValidationError) {
+  if (err instanceof PrismaClientValidationError) {
     return res.status(400).json({
       success: false,
       error: "Database validation error",

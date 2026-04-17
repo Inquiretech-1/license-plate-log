@@ -97,7 +97,7 @@ async function login(req, res, next) {
   }
 }
 
-async function getMe(req, res) {
+function getMe(req, res) {
   return res.json({
     success: true,
     data: { user: req.user },
