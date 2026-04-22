@@ -11,7 +11,16 @@ const mountRoutes = require("./routes");
 const app = express();
 
 app.use(cors());
-app.use(helmet());
+app.use(helmet({
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      imgSrc: ["'self'", "data:"],
+    }
+  }
+}));
 app.use(morgan("dev"));
 app.use(express.json());
 
